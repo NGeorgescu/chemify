@@ -20,6 +20,7 @@ Implementation
 The way to solve this is using a recursive-descent algorithm using a while loop.  The basic structure of this loop is:
 
 ::
+
     todo = [[item1, processing_data],[item2, processing_data], ... ]
     done = []
     while len(todo)>0:
@@ -57,6 +58,7 @@ The library contains two functions, `chemify` and `chemify_words`. The first is 
 An example is:
 
 ::
+
   >>> from chemify import chemify
   >>> chemify('georgescu')
   ['[Ge][O][Rg][Es][Cu]', '[Ge][O][Rg][Es][C][U]']
@@ -67,6 +69,7 @@ An example is:
 or:
 
 ::
+
   >>> from chemify import chemify_words
   >>> chemify_words('In case of fire, use stairs.')
   '[In] [Ca][Se] [O][F] [F][I][Re] [U][Se] [S][Ta][Ir][S]'
@@ -74,6 +77,7 @@ or:
 but:
 
 ::
+
   >>> chemify_words('In case of fire, do not use elevator')
    "do" failed to convert
    "not" failed to convert
