@@ -17,7 +17,6 @@ Ok... why?
 Implementation
 -----
 The way to solve this is using a recursive-descent algorithm using a while loop.  The basic structure of this loop is:
-
 ::
   todo = [[item1, processing_data],[item2, processing_data], ... ]
   done = []
