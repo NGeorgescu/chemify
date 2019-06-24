@@ -17,7 +17,9 @@ exec(open('chemify/version.py').read()) # loads __version__
 
 setup(name='chemify',
       version=__version__,
+      url='https://github.com/NGeorgescu/chemify',
       author='NGeorgescu',
+      author_email='nsgeorgescu@gmail.com',
     description='Write any phrase as a list of chemical element symbols from the periodic table',
     long_description=open('README.rst').read(),
     license='see LICENSE.txt',
