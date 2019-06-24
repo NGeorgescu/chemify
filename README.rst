@@ -24,18 +24,15 @@ The way to solve this is using a recursive-descent algorithm using a while loop.
     todo = [[item1, processing_data],[item2, processing_data], ... ]
     done = []
     while len(todo)>0:
+        item_to_workon = todo.pop()
 
-        todo.pop()
         for each_branch in branches:
-    
-           stuff.do()
+            stuff.do()
             data.process()
+
             if end_condition.met()
-
                 done.append(processing_data)
-
             else
-
                 todo.append([stuff, processing_data])
 
     return done
