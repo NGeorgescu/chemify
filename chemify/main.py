@@ -2,7 +2,7 @@ import re
 
 def chemify(string,**kwargs):
     """
-    chemify(string or list, failure="none", output="list")
+    chemify(string or list, failure="none", output="brackets")
 
     Descripton
     --------
@@ -24,9 +24,9 @@ def chemify(string,**kwargs):
     --------
     examples are for passing in my last name, capitalized
 
-    - "list": Lists of each possible lists of the chemical elements, e.g. [['Ge', 'O', 'Rg', 'Es', 'Cu'], ['Ge', 'O', 'Rg', 'Es', 'C', 'U']]
-    - "capitalize": List of possible capitalizations consistent with the elements, e.g. ['GeORgEsCu', 'GeORgEsCU']
     - "brackets": Like "capitalize" but the elements are bracketed, e.g. ['[Ge][O][Rg][Es][Cu]', '[Ge][O][Rg][Es][C][U]']
+    - "capitalize": List of possible capitalizations consistent with the elements, e.g. ['GeORgEsCu', 'GeORgEsCU']
+    - "list": Lists of each possible lists of the chemical elements, e.g. [['Ge', 'O', 'Rg', 'Es', 'Cu'], ['Ge', 'O', 'Rg', 'Es', 'C', 'U']]
     - "pass": Just return the input string, e.g. 'Georgescu'
     
     shortest
@@ -38,7 +38,7 @@ def chemify(string,**kwargs):
     --------
     Add extra 'fake' elements to the list just to make a phrase work.
     Some choices that aren't too whacky are 'D' for Deuterium, 'Nt' for Neutron, 'P' for Protium, 'Tr' for Tritium, or other particles.
-    Only works with 1- ornecessary 2- length items in the list.  Capitalization is not considered.
+    Only works with 1- or 2- length items in the list.  Capitalization is not considered.
     
     e.g. chemify('johnathan',output='brackets',fake_elements=['J','An'],shortest=True)) yields [J][O][H][Na][Th][An]
     
